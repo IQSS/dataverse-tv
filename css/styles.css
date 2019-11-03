@@ -1,0 +1,20 @@
+#videos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-card {
+  width: 300px;
+  padding: 1.5em;
+}
+
+.video-image {
+  height: 90px;
+}
+
+.video-image img {
+  height: auto; 
+  width: auto; 
+  max-width: 140px; 
+  max-height: 90px;
+}
