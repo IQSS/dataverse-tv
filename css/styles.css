@@ -1,20 +1,73 @@
+body {
+  font-family: 'Muli' ;
+}
+
+h1 {
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+
 #videos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  
 }
 
 .video-card {
+  display: flex;
+  flex-direction: column;
+
+  margin: 1em;
+ 
   width: 300px;
-  padding: 1.5em;
+  background-color: #fff;
+  
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.5em;
+  border-color: rgba(0, 0, 0, 0.125);
+  
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+.container {
+  padding: 1em;
+}
 .video-image {
-  height: 90px;
+  width: 100%;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  /* background-color: rgba(48,48,48,1); */
+  border-radius: 0.5em;
 }
 
 .video-image img {
-  height: auto; 
-  width: auto; 
-  max-width: 140px; 
-  max-height: 90px;
+  height: 165px;  
+  width: 100%;
+  border-radius: 0.5em ;
+  object-fit: cover;
+  /* border-radius: 0.5em 0.5em 0 0; */
 }
+
+.description, .date, .title, .slides-link, .slides {
+  padding-bottom: 1em;
+}
+
+.speaker {
+  font-size: larger;
+  padding-top: 1em;
+}
+
+.description {
+  font-size: smaller;
+  color: #333;
+}
+
+.date {
+  font-style: italic;
+  font-size: smaller;
+}
+
