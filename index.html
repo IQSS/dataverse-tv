@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DataverseTV</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/script.js"></script>
-  </head>
-  <body>
-    <h1>DataverseTV</h1>
-    <template id="video-template">
-      <div class="video-card">
-        <div class="video-image">
-          <a href="https://dataverse.org" class="video-image-link"
-            ><img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Wikiversity-Mooc-Icon-Video.svg"
-              class="imagesrc"
-          /></a>
-        </div>
-        <div class="speaker"></div>
-        <a href="" class="title-link">
-          <div class="title"></div>
-        </a>
-        <div class="description"></div>
-        <a href="" class="slides-link">
-          <div class="slides">Slides</div>
-        </a>
-        <div class="date"></div>
+
+<head>
+  <title>DataverseTV</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>DataverseTV</h1>
+  <template id="video-template">
+    <div class="video-card">
+      <div class="video-image">
+        <a href="https://dataverse.org" class="video-image-link"><img
+            src="assets/dataverse-tv.svg"
+            class="imagesrc" /></a>
       </div>
-    </template>
-    <div id="videos"></div>
-  </body>
+      <div class="container">
+        <div class="speaker"></div>
+        <div class="date"></div>
+        <div class="title-link">
+          <a href="">
+            <div class="title"></div>
+          </a>
+        </div>
+        <div class="description"></div>
+        <div class="slides-link">
+          <a href="">
+        </div>
+        <div class="slides">Slides</div>
+        </a>
+      </div>
+    </div>
+  </template>
+  <div id="videos"></div>
+</body>
+
 </html>
