@@ -46,7 +46,7 @@ async function populate_cards() {
         if (slides === '') {
           videoInstance.querySelectorAll('.slides-link').forEach(e => e.parentNode.removeChild(e));
         } else {
-          videoInstance.querySelector('.slides-link').setAttribute('href', slides);
+          videoInstance.querySelector('.slides-href').setAttribute('href', slides);
         }
         // Append the instance to the DOM
         document.getElementById('videos').appendChild(videoInstance);
