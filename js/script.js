@@ -24,7 +24,7 @@ async function populate_cards() {
         if (yid === '') {
           yurl = alt;
         } else {
-          if (yid === '') {
+          if (ystart === '') {
             yurl = 'https://www.youtube.com/watch?v=' + yid;
           } else {
             yurl = 'https://www.youtube.com/watch?v=' + yid + '&t=' + ystart + 's';
