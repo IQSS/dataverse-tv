@@ -21,7 +21,7 @@ async function populate_cards() {
         yid = y[4];
         alt = y[5];
         ystart = y[10];
-        defaultImage= y[13];
+        defaultImage = y[13];
         if (yid === '') {
           yurl = alt;
         } else {
