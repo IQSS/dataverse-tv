@@ -20,10 +20,15 @@ async function populate_cards() {
         yurl = '';
         yid = y[4];
         alt = y[5];
+        ystart = y[10];
         if (yid === '') {
           yurl = alt;
         } else {
-          yurl = 'https://www.youtube.com/watch?v=' + yid;
+          if (yid === '') {
+            yurl = 'https://www.youtube.com/watch?v=' + yid;
+          } else {
+            yurl = 'https://www.youtube.com/watch?v=' + yid + '&t=' + ystart + 's';
+          }
         }
         slides = y[6];
         const videoInstance = document.importNode(videoTemplate.content, true);
