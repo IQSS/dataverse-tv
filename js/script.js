@@ -21,6 +21,7 @@ async function populate_cards() {
         yid = y[4];
         alt = y[5];
         ystart = y[10];
+        defaultImage= y[13];
         if (yid === '') {
           yurl = alt;
         } else {
@@ -38,7 +39,7 @@ async function populate_cards() {
         videoInstance.querySelector('.date').innerHTML = date;
         videoInstance.querySelector('.title-href').setAttribute('href', yurl);
         videoInstance.querySelector('.video-image-link').setAttribute('href', yurl);
-        if (yid === '') {
+        if (yid === '' || defaultImage == 1) {
           // Keep default image.
         } else {
           yimg = 'https://i.ytimg.com/vi/' + yid + '/hqdefault.jpg';
