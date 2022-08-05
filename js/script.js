@@ -36,12 +36,8 @@ async function populate_cards() {
         videoInstance.querySelector('.speaker').innerHTML = speaker;
         videoInstance.querySelector('.description').innerHTML = description;
         videoInstance.querySelector('.date').innerHTML = date;
-        if (yurl === '') {
-          videoInstance.querySelector('.title-link').setAttribute('href', 'FUTURE');
-        } else {
-          videoInstance.querySelector('.title-link').setAttribute('href', yurl);
-          videoInstance.querySelector('.video-image-link').setAttribute('href', yurl);
-        }
+        videoInstance.querySelector('.title-href').setAttribute('href', yurl);
+        videoInstance.querySelector('.video-image-link').setAttribute('href', yurl);
         if (yid === '') {
           // Keep default image.
         } else {
