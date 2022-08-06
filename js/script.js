@@ -22,6 +22,7 @@ async function populate_cards() {
         alt = y[5];
         ystart = y[10];
         defaultImage = y[13];
+        githubUsername = y[14];
         if (yid === '') {
           yurl = alt;
         } else {
@@ -39,9 +40,17 @@ async function populate_cards() {
         videoInstance.querySelector('.date').innerHTML = date;
         videoInstance.querySelector('.title-href').setAttribute('href', yurl);
         videoInstance.querySelector('.video-image-link').setAttribute('href', yurl);
+        // Can't get a thumbnail from YouTube or default image specified.
         if (yid === '' || defaultImage == 1) {
-          // Keep default image.
+          if (githubUsername.length != 1) {
+            // Use GitHub image instead of default image.
+            yimg = 'https://github.com/' + githubUsername + '.png';
+            videoInstance.querySelector('.imagesrc').setAttribute('src', yimg);
+            var vidimg = videoInstance.querySelector('.video-image img');
+            vidimg.style.objectFit='scale-down';
+          }
         } else {
+          // Use YouTube thumbnail.
           yimg = 'https://i.ytimg.com/vi/' + yid + '/hqdefault.jpg';
           videoInstance.querySelector('.imagesrc').setAttribute('src', yimg);
         }
