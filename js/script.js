@@ -39,7 +39,9 @@ async function populate_cards() {
         videoInstance.querySelector('.description').innerHTML = description;
         videoInstance.querySelector('.date').innerHTML = date;
         videoInstance.querySelector('.title-href').setAttribute('href', yurl);
+        videoInstance.querySelector('.title-href').setAttribute('target', '_blank');
         videoInstance.querySelector('.video-image-link').setAttribute('href', yurl);
+        videoInstance.querySelector('.video-image-link').setAttribute('target', '_blank');
         // Can't get a thumbnail from YouTube or default image specified.
         if (yid === '' || defaultImage == 1) {
           if (githubUsername.length != 1) {
@@ -58,6 +60,7 @@ async function populate_cards() {
           videoInstance.querySelectorAll('.slides-link').forEach(e => e.parentNode.removeChild(e));
         } else {
           videoInstance.querySelector('.slides-href').setAttribute('href', slides);
+          videoInstance.querySelector('.slides-href').setAttribute('target', '_blank');
         }
         // Append the instance to the DOM
         document.getElementById('videos').appendChild(videoInstance);
