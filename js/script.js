@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+  detect_iframe();
   populate_cards();
 });
+
+function detect_iframe() {
+  /* When we are in an iFrame, add a certain HTML class to enable different CSS styling */
+  if (window!=window.top) {
+    document.body.classList.add('embedded')
+  }
+}
 
 async function populate_cards() {
   const url =
