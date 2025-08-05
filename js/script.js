@@ -52,7 +52,7 @@ async function populate_cards() {
         videoInstance.querySelector('.video-image-link').setAttribute('target', '_blank');
         // Can't get a thumbnail from YouTube or default image specified.
         if (yid === '' || defaultImage == 1) {
-          if (githubUsername.length != 1) {
+          if (githubUsername.length != 0) {
             // Use GitHub image instead of default image.
             yimg = 'https://github.com/' + githubUsername + '.png';
             videoInstance.querySelector('.imagesrc').setAttribute('src', yimg);
