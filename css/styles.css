@@ -4,11 +4,16 @@ body {
 }
 
 h1 {
-  margin-left: 2em;
+  margin-left: 2rem;
   margin-top: 1em;
 }
 
-.embedded h1 {
+.subtitle {
+  margin-left: 2rem;
+  margin-bottom: 1em;
+}
+
+.embedded h1, .embedded .subtitle {
   display: none;
 }
 
